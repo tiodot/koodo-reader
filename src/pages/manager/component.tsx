@@ -23,6 +23,8 @@ import { Toaster } from "react-hot-toast";
 import DetailDialog from "../../components/dialogs/detailDialog";
 import FeedbackDialog from "../../components/dialogs/feedbackDialog";
 
+const allowMobile = false;
+
 class Manager extends React.Component<ManagerProps, ManagerState> {
   timer!: NodeJS.Timeout;
   constructor(props: ManagerProps) {
@@ -79,7 +81,7 @@ class Manager extends React.Component<ManagerProps, ManagerState> {
   };
   render() {
     let { books } = this.props;
-    if (isMobile && document.location.href.indexOf("192.168") === -1) {
+    if (allowMobile && isMobile && document.location.href.indexOf("192.168") === -1) {
       return (
         <>
           <p className="waring-title">

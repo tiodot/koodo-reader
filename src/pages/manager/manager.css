@@ -51,3 +51,45 @@
   position: absolute;
   bottom: 0px;
 }
+
+@media (max-width: 640px){
+  .sidebar {
+    position: absolute;
+  }
+  .side-menu-container-parent {
+    z-index: 1;
+    background-color: #fff;
+  }
+
+  .book-list-container-parent {
+    left: 70px !important;
+    width: calc(100% - 70px) !important;
+  }
+
+  .manager .header {
+    width: calc(100vw - 70px);
+  }
+
+  .header {
+    position: absolute;
+    left: 70px;
+    margin-left: 0 !important;
+    display: flex;
+  }
+  .header .header-search-container {
+    margin-left: 0;
+    flex: 1;
+    position: relative;
+    width: auto !important;
+  }
+  .header .setting-icon-parrent {
+    position: relative;
+    margin-left: 0 !important;
+  }
+  .header .setting-icon-container {
+    margin-left: 0;
+  }
+  .manager .sort-dialog-container {
+    left: 70px;
+  }
+}
